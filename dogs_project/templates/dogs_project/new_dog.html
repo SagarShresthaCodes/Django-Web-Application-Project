@@ -1,0 +1,8 @@
+<p><b>Please fill out the following information:</b></p>
+<form action="{% url 'dogs_project:new_dog' %}" method='post'>
+	{% csrf_token %}
+	{{ form.as_p }}
+	<button name="submit">Submit information</button>
+</form>
+
+

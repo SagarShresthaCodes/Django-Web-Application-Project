@@ -1,0 +1,29 @@
+<p><h1>List of Dogs</h1></p>
+
+<table style="width:60%" border=1>
+	<tr>
+		<th>Dog ID</th>
+		<th>Dog Name</th>
+		<th>Dog Breed</th>
+		<th>Dog Age</th>
+		<th>Owner ID</th>
+	</tr>
+	
+	{% for dog in dogs %}
+		<tr>
+			<td align="center">{{dog.dogid}}</td>
+			<td>{{dog.dogname}}</td>
+			<td>{{dog.dogbreed}}</td>
+			<td align="center">{{dog.dogage}}</td>
+			<td align="center">{{dog.dogownerid}}</td>
+		</tr>
+		
+	{% empty %}
+	<p>No dogs found</p>
+	{% endfor %}
+	
+</table>
+
+<br><a href="{% url 'dogs_project:new_dog' %}"><b>Got a new four legged family member? Owners, add your doggy's info here.</b></a></br>
+
+
